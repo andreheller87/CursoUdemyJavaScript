@@ -16,3 +16,4 @@ const media = total / (peso1 + peso2);
 
 console.log(media.toFixed(2)); //formata para duas casa decimal
 console.log(media.toString()); //converte para String
+console.log(typeof media)
