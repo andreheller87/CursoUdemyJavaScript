@@ -1,13 +1,16 @@
-function getInteiroAleatorioEntre (Mim , Max){
-    const valor =Math.random() * (Max- Mim) + Mim;
-    return Math.floor(valor);
-}
-let opcao = 0;
 
-while(opcao != -1){
-    opcao = getInteiroAleatorioEntre(-1,10);
-    console.log("Imprimir " + opcao);
-    console.log(`Imprimir ${opcao}`);
+function getInteiroAleatorioEntre(mim , max){
+    const valor = Math.random()*(max - mim) + mim;
+    return Math.floor(valor)
 }
+
+let opcao = 0;
+while(opcao != -1){
+    opcao = getInteiroAleatorioEntre(-1,20);
+    if(opcao != -1){
+        console.log(`Numero ${opcao}` )
+    }
+}
+
 
 console.log("Ate a próxima!")
