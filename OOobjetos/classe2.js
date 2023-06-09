@@ -1,22 +1,26 @@
-class avo{
-    constructor(sobrenome){
-        this.sobrenome = sobrenome
+class Avo {
+    constructor(sobreNome){
+        this.sobreNome = sobreNome;
     }
+
 }
 
-class pai extends avo{
-    constructor(sobrenome,profisao =  'Professor'){
-        super(sobrenome);
-        this.profisao = profisao;
-    }
+class Pai extends Avo{
+constructor(sobreNome,profissao = 'Developer'){
+    super(sobreNome);
+    this.profissao = profissao;
+
+}
 }
 
-
-class Filho extends pai{
+class Filho extends Pai{
+    
     constructor(){
-        super('Silva')
+        super('Heller')
+        var nome;
     }
 }
 
 const filho = new Filho;
+filho.nome = 'Andre';
 console.log(filho);
