@@ -22,8 +22,24 @@ app.get('/produtos/:id', (req, res, next) => {
 });
 
 app.post('/produtos', (req, res, next) => {
-  const { nome, preco } = req.body;
-  const produto = bancoDeDados.salvarProduto({ nome, preco });
+  const produto = bancoDeDados.salvarProduto({
+    nome: req.body.nome,
+    preco: req.body.preco
+  })
+  res.send(produto);
+});
+
+app.put('/produtos/:id', (req, res, next) => {
+  const produto = bancoDeDados.salvarProduto({
+    id: req.params.id,
+    nome: req.body.nome,
+    preco: req.body.preco
+  })
+  res.send(produto);
+});
+
+app.delete('/produtos/:id', (req, res, next) => {
+  const produto = bancoDeDados.excluirProduto(req.params.id)
   res.send(produto);
 });
 
