@@ -28,7 +28,7 @@ public class Program {
 
 		Worker worker = new Worker(workerName, WorkerLevel.valueOf(workerLevel), workerBaseSalary,
 				new Department(departmentName));
-
+		System.out.println();
 		
 		sc.close();
 
