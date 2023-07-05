@@ -7,20 +7,30 @@ import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-public class Category implements Serializable{
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
-	
+@Entity
+public class Category implements Serializable {
 	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	@JsonIgnore
+	@OneToMany(mappedBy = "category")
 	private List<Product> products = new ArrayList<>();
+
 	public Category() {
-		
+
 	}
 
 	public Category(Long id, String name) {
-	
+
 		this.id = id;
 		this.name = name;
 	}
@@ -40,14 +50,10 @@ public class Category implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
 
 	public List<Product> getProducts() {
 		return products;
 	}
-
-
 
 	@Override
 	public int hashCode() {
@@ -65,5 +71,5 @@ public class Category implements Serializable{
 		Category other = (Category) obj;
 		return Objects.equals(id, other.id);
 	}
-	
+
 }
