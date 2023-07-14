@@ -60,9 +60,9 @@ public class Program {
 		int year = Integer.parseInt(monthAndYear.substring(3));
 		
 		
-		System.out.print("Name: "+ worker.getName());
-		System.out.print("Department: " + worker.getDepartment().getName());
-		System.out.print("Income for " + monthAndYear +  ": " + String.format("%2f", worker.income(year,month))  );
+		System.out.println("Name: "+ worker.getName());
+		System.out.println("Department: " + worker.getDepartment().getName());
+		System.out.print("Income for " + monthAndYear +  ": " + String.format("%.2f", worker.income(year,month))  );
 		
 		sc.close();
 
