@@ -1,5 +1,6 @@
 package postAndComments.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -10,6 +11,8 @@ public class Post {
 	private String content;
 	private Integer likes;
 	private List<Comment> comments = new ArrayList<>();
+	
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
 	public Post() {
 
@@ -62,6 +65,29 @@ public class Post {
 	public void addComment(Comment comment) {
 		comments.add(comment); 
 	}
+	
+	public void removeComment(Comment comment) {
+		comments.remove(comment);
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		
+		sb.append(title + "\n");
+		sb.append(likes);
+		sb.append(" Likes - ");
+		sb.append(sdf.format( moment) + "\n");
+		sb.append(content +"\n");
+		sb.append("Comments:\n");
+		for (Comment comment : comments) {
+			sb.append(comment.getText() + "\n");
+		}
+
+		return sb.toString();
+	}
+	
 
 	
 }
