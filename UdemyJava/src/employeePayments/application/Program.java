@@ -17,7 +17,7 @@ public class Program {
 		String departmentName = sc.nextLine();
 		System.out.println("Enter worker data: ");
 
-		System.out.print("---");
+		
 		System.out.print("Name:");
 		String workerName = sc.nextLine();
 
