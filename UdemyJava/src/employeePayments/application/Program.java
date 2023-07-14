@@ -39,7 +39,7 @@ public class Program {
 		System.out.print("How many contracts to this worker? ");
 		int n = sc.nextInt();
 		
-		for (int i = 0; i <= n; i++) {
+		for (int i =1; i <= n; i++) {
 			
 			System.out.println("Enter contract #"+ i + " data:");
 			
@@ -51,10 +51,18 @@ public class Program {
 			int hours = sc.nextInt();
 			HourContract contract = new HourContract(contractDate, valuePerhour,hours);
 			worker.addContract(contract);
-
-			
+	
 		}
-
+		System.out.println();
+		System.out.print("Enter month and year to calculate income (MM/YYYY): ");
+		String monthAndYear = sc.next();
+		int month = Integer.parseInt(monthAndYear.substring(0,2));
+		int year = Integer.parseInt(monthAndYear.substring(3));
+		
+		
+		System.out.print("Name: "+ worker.getName());
+		System.out.print("Department: " + worker.getDepartment().getName());
+		System.out.print("Income for " + monthAndYear +  ": " + String.format("%2f", worker.income(year,month))  );
 		
 		sc.close();
 
