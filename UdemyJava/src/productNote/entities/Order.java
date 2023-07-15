@@ -9,7 +9,7 @@ import productNote.enums.OrderStatus;
 
 public class Order {
 
-	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 	private Date moment;
 	private OrderStatus status;
 	private List<OrderItem> items = new ArrayList<>();
