@@ -2,16 +2,17 @@ package productNote.entities;
 
 public class OrderItem {
 
-	private Product product = new Product();
+	private Product product;
 	private Integer quantity;
 	private Double price;
 
 	public OrderItem() {
 	}
 
-	public OrderItem(Integer quantity, Double price) {
+	public OrderItem(Integer quantity, Double price, Product product) {
 		this.quantity = quantity;
 		this.price = price;
+		this.product = product;
 	}
 
 	public Integer getQuantity() {
@@ -30,7 +31,6 @@ public class OrderItem {
 		this.price = price;
 	}
 
-	
 	public Product getProduct() {
 		return product;
 	}
@@ -39,7 +39,20 @@ public class OrderItem {
 		this.product = product;
 	}
 
-	public Double subTotal() {
-		return this.getPrice() * this.getQuantity();
+	public double subTotal() {
+		return this.getProduct().getPrice() * this.getQuantity();
 	}
+
+	@Override
+	public String toString() {
+		
+		return this.getProduct().getName() + ", $"
+		+ String.format("%.2f", price)
+		+ ", Quantity: "
+		+ quantity
+		+ ", Subtotal: $" 
+		+ String.format("%.2f", subTotal());
+	}
+	
+	
 }

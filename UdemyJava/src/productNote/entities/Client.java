@@ -3,7 +3,7 @@ package productNote.entities;
 import java.util.Date;
 
 public class Client {
-	
+
 	private String name;
 	private String email;
 	private Date birthDate;
@@ -42,5 +42,4 @@ public class Client {
 		this.birthDate = birthDate;
 	}
 
-	
 }
