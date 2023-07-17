@@ -56,3 +56,32 @@ function total(...numeros){
     return total
 }
 console.log(total(2,3,4,5))
+
+// ES8: object.values/ Object.entries
+
+const obj = { a:1, b:2, c:3, d:4}
+console.log(Object.values(obj))
+console.log(Object.entries(obj))
+
+//Melhorias na Notação Literal
+
+const nome2 = 'Carla'
+
+const pessoa = {
+    nome2,
+    ola(){
+        return 'Oi gente'
+    }
+}
+
+console.log(pessoa.nome2, pessoa.ola())
+
+//class
+class Animal{}
+class Cachorro extends Animal{
+    falar(){
+        return 'au au!'
+    }
+}
+
+console.log(new Cachorro().falar())
