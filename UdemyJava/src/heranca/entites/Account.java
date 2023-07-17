@@ -14,7 +14,7 @@ public class Account {
 	public Account(Integer number, String holder, Double balance) {
 		this.setNumber(number);
 		this.setHolder(holder);
-		this.setBalance(balance);
+		this.balance = balance;
 	}
 
 
@@ -38,8 +38,12 @@ public class Account {
 		return balance;
 	}
 
-	public void setBalance(Double balance) {
-		this.balance = balance;
+	
+	public void withdraw(Double amount) {
+		this.balance -= amount;
 	}
 	
+    public void deposit(Double amount) {
+    	this.balance += amount;
+	}
 }
