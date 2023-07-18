@@ -8,7 +8,7 @@ public class Program {
 
 	public static void main(String[] args) {
 
-		Account acc = new Account(1001, "Alex", 0.0);
+		Account acc = new Account(1001, "Alex", 1000.0);
 
 		BusinessAccount bacc = new BusinessAccount(1002, "Andre Heller", 0.0, 500.0);
 
@@ -35,7 +35,16 @@ public class Program {
 			System.out.println("Update");
 		}
 
-		System.out.println();
+		
+		SavingsAccount accSave = new SavingsAccount(1014, "Gabriel",1000.0, 0.0);
+				
+		acc.withdraw(200.0);
+		accSave.withdraw(200.0);
+		
+		
+		
+		System.out.println(acc.getBalance());
+		System.out.println(accSave.getBalance());
 
 	}
 
