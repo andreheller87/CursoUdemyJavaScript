@@ -10,7 +10,7 @@ public class Program {
 
 		Account acc = new Account(1001, "Alex", 1000.0);
 
-		BusinessAccount bacc = new BusinessAccount(1002, "Andre Heller", 0.0, 500.0);
+		
 
 		// UpCasting
 
