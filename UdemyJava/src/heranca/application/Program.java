@@ -37,14 +37,17 @@ public class Program {
 
 		
 		SavingsAccount accSave = new SavingsAccount(1014, "Gabriel",1000.0, 0.0);
-				
+		BusinessAccount accBusiness  = new BusinessAccount(1012, "Andre Heller", 1000.0, 500.0);
+		
 		acc.withdraw(200.0);
 		accSave.withdraw(200.0);
+		accBusiness.withdraw(200.0);
 		
 		
 		
 		System.out.println(acc.getBalance());
 		System.out.println(accSave.getBalance());
+		System.out.println(accBusiness.getBalance());
 
 	}
 
