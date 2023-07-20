@@ -19,7 +19,7 @@ const http= require('http')
     })
    })
  }
-/*
+
  let nomes =[]
  getTurma('A').then(alunos =>{
     
@@ -36,7 +36,7 @@ const http= require('http')
         console.log(nomes)
      })
  })
-*/
+
 Promise.all([getTurma('A'),getTurma('B'),getTurma('C')])
 
 .then(turmas => [].concat(...turmas))
