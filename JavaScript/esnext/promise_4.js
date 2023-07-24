@@ -25,4 +25,8 @@ function gerarVariosNumeros(){
         gerarNumerosEntre(1, 60, 2000),
     ])
 }
-gerarVariosNumeros().then(numeros=>console.log(numeros))
+console.time('Promise')
+gerarVariosNumeros()
+.then(numeros=>console.log(numeros))
+console.timeLog('Promise')
+console.timeEnd('Promise')
