@@ -2,11 +2,11 @@
 
 <ul class="tree">
     <li>
-        <span wm-folder>backend</span>
+        <span wm-folder style="cursor: pointer;">backend</span>
         
         <ul>
             <li>
-                <span wm-folder>app</span>
+                <span wm-folder style="cursor: pointer;">app</span>
                 
                 <ul>
                     <li>produto.js</li>
@@ -15,7 +15,7 @@
                 </ul>
             </li>
             <li>
-                <span wm-folder>config</span>
+                <span wm-folder style="cursor: pointer;">config</span>
                
                 <ul>
                     <li>banco.js</li>
@@ -26,11 +26,11 @@
         </ul>
     </li>
     <li>
-        <span wm-folder>frontend</span>
+        <span wm-folder style="cursor: pointer;">frontend</span>
         
         <ul>
              <li>
-                <span wm-folder>public</span>
+                <span wm-folder style="cursor: pointer;">public</span>
                
                 <ul>
                     <li>app.css</li>
@@ -43,3 +43,11 @@
 </ul>
 
 <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+    document.querySelectorAll('[wm-folder]').forEach(folder => {
+        folder.addEventListener('click', function(e) {
+            console.log('teste');
+        });
+    });
+</script>
