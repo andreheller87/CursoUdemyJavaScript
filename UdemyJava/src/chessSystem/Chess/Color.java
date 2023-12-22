@@ -1,5 +1,8 @@
-package chessSystem.Chess;
+package chessSystem.chess;
+
+
 
 public enum Color {
-	BLACK,WHITE;
+	BLACK,
+	WHITE;
 }

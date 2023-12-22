@@ -1,4 +1,6 @@
-package chessSystem.Chess;
+package chessSystem.chess;
+
+
 
 import chessSystem.boardgame.BoardException;
 
