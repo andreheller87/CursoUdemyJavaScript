@@ -11,7 +11,7 @@ import Connector2BancoDeDados.db.DB;
 
 
 
-public class Program {
+public class SelectProgram {
 
 	public static void main(String[] args) {
 		Connection conn = null;
