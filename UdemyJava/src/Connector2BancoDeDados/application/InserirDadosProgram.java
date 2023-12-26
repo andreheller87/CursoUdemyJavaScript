@@ -19,7 +19,7 @@ public class InserirDadosProgram {
 		
 		try {
 			conn =DB.getConnection();
-			st = conn.prepareStatement(
+		/*	st = conn.prepareStatement(
 					"INSERT INTO seller"
 					+"(Name, Email, BirthDate, BaseSalary, DepartmentId)"
 					+ "values"
@@ -30,7 +30,13 @@ public class InserirDadosProgram {
 				st.setDate(3, new java.sql.Date(sdf.parse("28/10/1995").getTime()));
 			st.setDouble(4,3200.0);
 			st.setInt(5,4 );
+		*/	
 			
+			st = conn.prepareStatement(
+					"INSERT INTO department"
+					+"(Name)"
+					+ "values"
+					+"('D1')", Statement.RETURN_GENERATED_KEYS);
 		int rowsAffected = st.executeUpdate();
 		
 		if(rowsAffected >0) {
@@ -45,9 +51,10 @@ public class InserirDadosProgram {
 		
 		}catch (SQLException e) {
 			e.printStackTrace();
-		} catch (ParseException e) {
+		}
+		/*catch (ParseException e) {
 			e.printStackTrace();
-		}finally {
+		}*/finally {
 			
 			DB.closeStatement(st);
 			DB.closeConnection();
